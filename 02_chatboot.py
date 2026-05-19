@@ -43,12 +43,13 @@
 # link 2: https://www.youtube.com/watch?v=Ro_MScTDfU4
 # link 3: https://youtu.be/Gx5qb1uHss4?si=LtpBNIB6yST3Vlcq
 
+from typing import Final
+EXITS: Final[set[str]] = {"bye","goodbye","see you"}
 
 answers: dict[str,str] = {}
 answers["hi"] = "Hi there! How can I help you?"
 answers["hello"] = "Hi there! How can I help you?"
-answers["bye"] = "Goodbye! Have a great day!"
-answers["see you"] = "Goodbye! Have a great day!?"
+
 
 history: list[str] = []
 
@@ -60,7 +61,10 @@ while True:
     user_input: str = input('You: ').lower()
     history.append(f"You: {user_input}")
 
-    if user_input in answers:
+    if user_input in EXITS:
+        print(f"{bot_name}: Goodbye! Have a great day! ")
+        break
+    elif user_input in answers:
         print(answers[user_input])
         history.append(f"{bot_name}: {answers[user_input]}")
     elif user_input in ["+", "add"]:
