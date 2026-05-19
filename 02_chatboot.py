@@ -44,7 +44,7 @@
 # link 3: https://youtu.be/Gx5qb1uHss4?si=LtpBNIB6yST3Vlcq
 
 
-answers: dict[str,str]
+answers: dict[str,str] = {}
 answers["hi"] = "Hi there! How can I help you?"
 answers["hello"] = "Hi there! How can I help you?"
 answers["bye"] = "Goodbye! Have a great day!"
