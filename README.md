@@ -13,5 +13,6 @@ Contexto, stack e dinâmica de trabalho: ver `CLAUDE.md`.
 |---|---|---|
 | `01_chatboot.py` | Base | variáveis tipadas, f-strings, `while`/`break`, `if/elif`, `try/except`, `float()` |
 | `02_chatboot.py` | Memória e mapeamento | `dict` (lookup de respostas), `list` + `for` (histórico), `set` + `Final` (palavras de saída em CAPS) |
+| `03_chatboot.py` | Modularização e biblioteca | `def`/`return` (funções puras), dispatch via dict de funções, `import random` + `random.choice`, `tuple` + unpacking, `raise` |
 
-**Próximo**: `03_chatboot.py` — funções, dispatch via dict de funções, `import random`, `tuple` para entrada estruturada.
+**Próximo**: `04_chatboot.py` — classes, `__init__`, métodos, dunder methods (`__str__`, `__len__`).
