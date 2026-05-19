@@ -50,21 +50,34 @@ answers["hello"] = "Hi there! How can I help you?"
 answers["bye"] = "Goodbye! Have a great day!"
 answers["see you"] = "Goodbye! Have a great day!?"
 
+history: list[str] = []
+
+
 bot_name: str = "Bob"
 print(f"Hello! I'm {bot_name}! How can I assist you today?")
 
 while True:
     user_input: str = input('You: ').lower()
+    history.append(f"You: {user_input}")
 
     if user_input in answers:
         print(answers[user_input])
+        history.append(f"{bot_name}: {answers[user_input]}")
     elif user_input in ["+", "add"]:
         print(f"{bot_name}: Sure! Let's do some addition! Please enter two numbers")
+        history.append(f"{bot_name}: Sure! Let's do some addition! Please enter two numbers")
         try:
             num1: float = float(input("First number: "))
             num2: float = float(input("Second number: "))
             print(f"{bot_name}: The sum is {num1 + num2}")
+            history.append(f"{bot_name}: The sum is {num1 + num2}")
         except ValueError:
             print(f"{bot_name}: Oops! That doesn't sem like a valid number. Try again!")
+            history.append(f"{bot_name}: Oops! That doesn't sem like a valid number. Try again!")
+    elif user_input == "history":
+        print(f"{bot_name}: Here's our conversation: ")
+        for hist in history:
+            print(hist)
     else:
         print(f"{bot_name}: I'm sory, I don't understand that, Please try again.")
+        history.append(f"{bot_name}: I'm sory, I don't understand that, Please try again.")
