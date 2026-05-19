@@ -63,12 +63,14 @@
 # link 2: https://www.youtube.com/watch?v=Ro_MScTDfU4
 # link 3: https://youtu.be/Gx5qb1uHss4?si=LtpBNIB6yST3Vlcq
 
+import random
+
 from typing import Final
 EXITS: Final[set[str]] = {"bye","goodbye","see you"}
 
-answers: dict[str,str] = {}
-answers["hi"] = "Hi there! How can I help you?"
-answers["hello"] = "Hi there! How can I help you?"
+answers: dict[str,list[str]] = {}
+answers["hi"] = ["Hi there!", "Hello!", "Hey, how can I help?"]
+answers["hello"] = ["Hi there!", "Hello!", "Hey, how can I help?"]
 
 history: list[str] = []
 
@@ -94,7 +96,7 @@ while True:
         print(f"{bot_name}: Goodbye! Have a great day! ")
         break
     elif user_input in answers:
-        print(answers[user_input])
+        print(random.choice(answers[user_input]))
         history.append(f"{bot_name}: {answers[user_input]}")
     elif user_input in arithmetic:
         print(f"{bot_name}: Sure! Let's do some {arithmetic[user_input].__name__}! Please enter two numbers")
