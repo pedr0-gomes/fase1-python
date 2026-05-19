@@ -82,6 +82,15 @@ def div(a: float, b: float) -> float:
         return a / b
     except ZeroDivisionError:
         return float("inf")
+    
+def parse_two_numbers(enter: str) -> tuple[float, float]:
+    tup = enter.split()
+    if len(tup) != 2:
+        raise ValueError("Esperado dois números separados por espaço")
+    return float(tup[0]), float(tup[1])
+
+
+
 
 arithmetic = {"+": add, "-": sub, "*": mul, "/": div}
 
@@ -102,8 +111,8 @@ while True:
         print(f"{bot_name}: Sure! Let's do some {arithmetic[user_input].__name__}! Please enter two numbers")
         history.append(f"{bot_name}: Sure! Let's do some {arithmetic[user_input].__name__}! Please enter two numbers")
         try:
-            num1: float = float(input("First number: "))
-            num2: float = float(input("Second number: "))
+            enter: str = input("Two numbers (space-separated): ")
+            num1, num2 = parse_two_numbers(enter)
             print(f"{bot_name}: The {arithmetic[user_input].__name__} is {arithmetic[user_input](num1,num2)}")
             history.append(f"{bot_name}: The {arithmetic[user_input].__name__} is {arithmetic[user_input](num1,num2)}")
         except ValueError:
