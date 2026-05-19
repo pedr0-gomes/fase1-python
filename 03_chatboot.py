@@ -70,17 +70,18 @@ answers: dict[str,str] = {}
 answers["hi"] = "Hi there! How can I help you?"
 answers["hello"] = "Hi there! How can I help you?"
 
-
 history: list[str] = []
 
-def somar(a: float, b: float) -> float: return a + b
-def subtrair(a: float,b: float) -> float: return a - b
-def multiplicar(a: float, b: float) -> float: return a * b
-def dividir(a: float, b: float) -> float:
+def add(a: float, b: float) -> float: return a + b
+def sub(a: float,b: float) -> float: return a - b
+def mul(a: float, b: float) -> float: return a * b
+def div(a: float, b: float) -> float:
     try:
         return a / b
     except ZeroDivisionError:
         return float("inf")
+
+arithmetic = {"+": add, "-": sub, "*": mul, "/": div}
 
 bot_name: str = "Bob"
 print(f"Hello! I'm {bot_name}! How can I assist you today?")
@@ -95,14 +96,14 @@ while True:
     elif user_input in answers:
         print(answers[user_input])
         history.append(f"{bot_name}: {answers[user_input]}")
-    elif user_input in ["+", "add"]:
-        print(f"{bot_name}: Sure! Let's do some addition! Please enter two numbers")
-        history.append(f"{bot_name}: Sure! Let's do some addition! Please enter two numbers")
+    elif user_input in arithmetic:
+        print(f"{bot_name}: Sure! Let's do some {arithmetic[user_input].__name__}! Please enter two numbers")
+        history.append(f"{bot_name}: Sure! Let's do some {arithmetic[user_input].__name__}! Please enter two numbers")
         try:
             num1: float = float(input("First number: "))
             num2: float = float(input("Second number: "))
-            print(f"{bot_name}: The sum is {somar(num1,num2)}")
-            history.append(f"{bot_name}: The sum is {somar(num1,num2)}")
+            print(f"{bot_name}: The {arithmetic[user_input].__name__} is {arithmetic[user_input](num1,num2)}")
+            history.append(f"{bot_name}: The {arithmetic[user_input].__name__} is {arithmetic[user_input](num1,num2)}")
         except ValueError:
             print(f"{bot_name}: Oops! That doesn't sem like a valid number. Try again!")
             history.append(f"{bot_name}: Oops! That doesn't sem like a valid number. Try again!")
