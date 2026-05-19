@@ -70,6 +70,12 @@ class Chatbot:
         }
         self.exits: set[str] = {"bye","goodbye","see you"}
         self.arithmetic = {"+": add, "-": sub, "*": mul, "/": div}
+    
+    def __str__(self) -> str:
+       return f"Chatbot {self.bot_name} ({len(self.history)} message)"
+
+    def __len__(self) -> int:
+       return len(self.history)
         
     
     def show_history(self) -> None:
@@ -103,6 +109,11 @@ class Chatbot:
       elif user_input == "history":
         self.show_history()
         return True
+      elif user_input == "info":
+         print(self)
+         print(len(self))
+         self.history.append(user_input)
+         return True
       else:
         print(f"{self.bot_name}: I'm sory, I don't understand that, Please try again.")
         self.history.append(f"{self.bot_name}: I'm sory, I don't understand that, Please try again.")
