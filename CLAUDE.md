@@ -62,11 +62,17 @@ Nem todo bloco serve a um projeto de aprendizado. Os que se aplicam, e como roda
   assistente explica o mecanismo inline. Sem desvio formal, salvo conceito grande travando antes.
 - **Construir** — esteira colapsada em `Implementation (mão de Pedro) + QA (rodar no terminal)`.
   Sem PRD/Kanban/Prototype/`tdd` — pesados demais para exercício onde Pedro escreve cada linha.
-  Design, quando preciso, fica em palavras no chat, não em `design.md`.
+  Design, quando preciso, fica em palavras no chat — daqui pra frente sem `design.md`
+  (os `design.md` em `01_dados/05_loteria/` e `01_dados/06_arquivos/` são legado de antes desta regra).
 - **Destilar** — fecha cada exercício: commit + atualizar `README.md` + memória.
 
-**Não se aplicam:** **Investigar** (sem pesquisa externa) e **Expor** (o raciocínio do
-aprendizado é privado; só o código vai a público).
+**Não se aplica:** **Investigar** — sem pesquisa externa (aprender APIs/`requests` é
+curiosidade-pra-fazer: vai pro **Aprender**, não pro Investigar).
+
+**Não ativado por ora:** **Expor** — não por incompatibilidade. A jornada de aprender Python
+construindo, exercício a exercício, é candidata legítima a post; só não foi ativado ainda.
+Quando ativar: o raciocínio expositivo (dossiê/arco/draft) mora no Notion, não no repo —
+só o post final e o código vão a público.
 
 Sem `CONTEXT.md` local por enquanto: o mapeamento acima cabe nesta lei. Um `CONTEXT.md` do
 projeto nasce só quando houver *mapa* que não caiba aqui — mesma regra da estrutura de pastas.
