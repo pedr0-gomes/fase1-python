@@ -52,6 +52,27 @@ A camada atual fica registrada no `README.md` do projeto à medida que avança.
 
 ---
 
+## Blocos do método neste projeto
+
+O fase1 roda pelo método de blocos componíveis do sistema global — mapa em
+`C:\Users\pedro\.claude\CONTEXT.md` (fonte do método; **não** re-explicar os blocos aqui).
+Nem todo bloco serve a um projeto de aprendizado. Os que se aplicam, e como rodam aqui:
+
+- **Aprender** — embutido (aprende-fazendo). Dúvida just-in-time durante o exercício; o
+  assistente explica o mecanismo inline. Sem desvio formal, salvo conceito grande travando antes.
+- **Construir** — esteira colapsada em `Implementation (mão de Pedro) + QA (rodar no terminal)`.
+  Sem PRD/Kanban/Prototype/`tdd` — pesados demais para exercício onde Pedro escreve cada linha.
+  Design, quando preciso, fica em palavras no chat, não em `design.md`.
+- **Destilar** — fecha cada exercício: commit + atualizar `README.md` + memória.
+
+**Não se aplicam:** **Investigar** (sem pesquisa externa) e **Expor** (o raciocínio do
+aprendizado é privado; só o código vai a público).
+
+Sem `CONTEXT.md` local por enquanto: o mapeamento acima cabe nesta lei. Um `CONTEXT.md` do
+projeto nasce só quando houver *mapa* que não caiba aqui — mesma regra da estrutura de pastas.
+
+---
+
 ## Regras do projeto
 
 1. **Todo script vai para o repositório.** Mesmo exercícios pequenos e descartáveis. Histórico é
