@@ -5,9 +5,9 @@ Contexto, stack e dinâmica de trabalho: ver `CLAUDE.md`.
 
 ## Camada atual
 
-**1. Dados — concluída.** Tipos primitivos, coleções (`list`, `dict`, `set`, `tuple`), leitura/escrita de arquivos.
+**2. APIs — em andamento.** `requests`, consumo de JSON via rede, tratamento de erro HTTP/rede.
 
-Próxima: **2. APIs** (`requests`, JSON, HTTP).
+Anterior: **1. Dados — concluída.** Tipos primitivos, coleções (`list`, `dict`, `set`, `tuple`), leitura/escrita de arquivos.
 
 ## Progressão do chatboot
 
@@ -27,4 +27,10 @@ Próxima: **2. APIs** (`requests`, JSON, HTTP).
 | `05_loteria/` | Loteria customizada | funções puras vs interativas, `set` + intersecção (`&`), `random.sample`, `dict` aninhado, validação de input com `try/except` |
 | `06_arquivos/` | Manipulação de arquivos | `csv.DictReader`, `json.dump`, `with`/context manager, encoding UTF-8, filtro com lista branca |
 
-**Camada 1 concluída.** Próximo passo: camada 2 (APIs) com `requests`.
+**Camada 1 concluída.**
+
+## Exercícios da Camada 2
+
+| Pasta | Tema | Conceitos exercitados |
+|---|---|---|
+| `01_nomes_ibge/` | Frequência de nomes (IBGE) | `requests.get` + `timeout`, `raise_for_status`, parsing de JSON via rede, hierarquia de exceções, exceção customizada (`UsuarioDesistiu`), loop de retry |

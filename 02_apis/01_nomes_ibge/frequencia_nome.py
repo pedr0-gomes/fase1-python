@@ -23,4 +23,16 @@ def busca_com_retry(nome: str) -> list | None:
                 continue
             raise UsuarioDesistiu()
 
-    
+def main():
+    nome: str = input("Digite o nome do usuário que você quer que eu busque: ")
+    try:
+        resultado: list | None = busca_com_retry(nome)
+        if resultado is None:
+            print("Não há dados disponíveis para esse nome")
+        else:
+            print(f"## Resultado do Nome {nome} ##")
+            print(resultado)
+    except UsuarioDesistiu:
+        print(f"Estou à disposição caso queira buscar o nome {nome} em outro momento!")
+
+main()    
