@@ -5,9 +5,9 @@ Contexto, stack e dinâmica de trabalho: ver `CLAUDE.md`.
 
 ## Camada atual
 
-**2. APIs — em andamento.** `requests`, consumo de JSON via rede, tratamento de erro HTTP/rede.
+**3. Estrutura — em andamento.** Módulos, pacotes, separação de responsabilidades, testes com `pytest`.
 
-Anterior: **1. Dados — concluída.** Tipos primitivos, coleções (`list`, `dict`, `set`, `tuple`), leitura/escrita de arquivos.
+Anteriores: **2. APIs — concluída** (`requests`, consumo de JSON via rede, tratamento de erro HTTP/rede) · **1. Dados — concluída** (tipos primitivos, coleções, leitura/escrita de arquivos).
 
 ## Progressão do chatboot
 
@@ -34,3 +34,11 @@ Anterior: **1. Dados — concluída.** Tipos primitivos, coleções (`list`, `di
 | Pasta | Tema | Conceitos exercitados |
 |---|---|---|
 | `01_nomes_ibge/` | Frequência de nomes (IBGE) | `requests.get` + `timeout`, `raise_for_status`, parsing de JSON via rede, hierarquia de exceções, exceção customizada (`UsuarioDesistiu`), loop de retry |
+
+**Camada 2 concluída.**
+
+## Exercícios da Camada 3
+
+| Pasta | Tema | Conceitos exercitados |
+|---|---|---|
+| `01_nomes_em_lote/` | Pipeline de nomes em lote (capstone) | separação de responsabilidades em 4 módulos (`entrada`/`ibge`/`saida`/`main`), `set` para dedupe, `csv.DictWriter`, reúso de módulo entre exercícios, guard `if __name__ == "__main__"` |
