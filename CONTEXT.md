@@ -5,6 +5,16 @@ As leis (como o assistente trabalha aqui) vivem no `CLAUDE.md`.
 
 ---
 
+## Próximo passo
+
+Introduzir `pytest` na Camada 3 — maior gap da camada (nada foi testado de
+forma automatizada ainda). Alvo: o capstone `03_estrutura/01_nomes_em_lote/`.
+Testar `entrada.normalizar`/`validar` (funções puras) e `ibge.consulta` (com a
+rede mockada, pra não bater na API real). Pré-requisito: criar o `.venv`
+(ainda não existe — tudo rodou com o `python3` do sistema) e instalar `pytest`.
+
+---
+
 ## Contexto
 
 Primeira fase de uma trajetória de aprendizado de Python planejada em múltiplas fases (`fase1`, `fase2`, ...).
